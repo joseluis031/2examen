@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from math import sqrt
 
-class Ejercicio:
+class Ejercicio: #importo 2 csv 
     def __init__(self,datos):
         self.datos = pd.read_csv(datos)
         self.N = self.datos["#"].sum()
