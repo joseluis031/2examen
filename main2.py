@@ -6,4 +6,13 @@ if __name__ == "__main__":
         if main == 1:
             print("La media del entrenador 1 en total es: " ,ejercicio.calculo_media(), ",en HP es: ",ejercicio.calculo_media_hp(), ",en ataque es: ", ejercicio.calculo_media_ataque(),",en defensa es: ",ejercicio.calculo_media_defense())
             print("La media del entrenador 2 en total es: " ,ejercicio2.calculo_media(), ",en HP es: ",ejercicio2.calculo_media_hp(), ",en ataque es: ", ejercicio2.calculo_media_ataque(),",en defensa es: ",ejercicio2.calculo_media_defense())
-            
+        elif main == 2:
+            print("La media del entrenador 1 en total es: " ,ejercicio.calculo_desvi())
+            print("La media del entrenador 1 en total es: " ,ejercicio2.calculo_media())
+        elif main == 3:
+            ejercicio.calculo_porcent_68()
+        elif main == 4:
+            ejercicio.calculo_porcent_95()
+        elif main == 5:
+            ejercicio.calculo_porcent_99_7()
+              
