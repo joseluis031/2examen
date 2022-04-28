@@ -11,8 +11,7 @@ class Grafico:
         self.col2 = col2
         
     def grafico(self,title):
-        self.dataset = pd.read_csv("entrenador 1.csv")
-        self.dataset = pd.read_csv("entrenador 1.csv")
+        self.dataset = pd.read_csv("Pokemon.csv")
         self.dataset.groupby(self.col1)[self.col2].sum().plot(kind="bar")
         plt.title(title)
         plt.xlabel(None)
