@@ -2,10 +2,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from math import sqrt
 
-class Ejercicio: #importo 2 csv 
+class Ejercicio: 
     def __init__(self,datos):
         self.datos = pd.read_csv(datos)
-        self.N = self.datos["#"].sum()
+        self.N = self.datos["#"].count()
 
     def calculo_media(self):
         suma = self.datos["Total"].sum()
@@ -27,5 +27,9 @@ class Ejercicio: #importo 2 csv
     
     
     def calculo_desvi(self):
-        suma_desvi = self.datos["Total"].sum() * self.datos[("#"- self.calculo_media)**2]
+        suma_desvi = self.datos["Total"].sum() * ((self.N- self.calculo_media)**2)
         return sqrt(suma_desvi/self.N)
+
+ejercicio = Ejercicio("entrenador 1.csv")
+print("La media es: " ,ejercicio.calculo_media())
+print(ejercicio.calculo_desvi())
